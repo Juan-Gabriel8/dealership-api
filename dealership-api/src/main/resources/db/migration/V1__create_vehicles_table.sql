@@ -1,0 +1,15 @@
+CREATE TABLE vehicles
+(
+id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+plate VARCHAR(10) NOT NULL,
+model VARCHAR(100) NOT NULL,
+brand VARCHAR(100) NOT NULL,
+manufacture_year INTEGER NOT NULL,
+owner_name VARCHAR(100) NOT NULL,
+owner_email VARCHAR(100) NOT NULL,
+created_at TIMESTAMP NOT NULL,
+updated_at TIMESTAMP NOT NULL,
+deleted_at TIMESTAMP NULL
+);
+
+CREATE INDEX idx_vehicles_plate ON vehicles(plate);
